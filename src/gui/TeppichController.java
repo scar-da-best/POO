@@ -21,6 +21,8 @@ public class TeppichController implements Observer
     public TeppichController(Stage primaryStage) 
     {
         this.view = new TeppichView();  
+
+		//NEUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU
         this.model = TeppichModel.getInstance();
         model.addObserver(this);
         initListener();
@@ -146,9 +148,11 @@ public class TeppichController implements Observer
         new MeldungsfensterAnzeiger(AlertType.ERROR, "Fehler", meldung).zeigeMeldungsfensterAn();
     }
 
+	//NEUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU
 	@Override
 	public void update() 
 	{
 		zeigeTeppicheAn();
 	}
+
 }
